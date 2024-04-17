@@ -1,0 +1,133 @@
+{
+    "application": {
+        "apType": "ovs",
+        "authentication": "none",
+        "dpctl": "",
+        "enableWmediumd": "0",
+        "ipBase": "10.0.0.0/8",
+        "mode": "g",
+        "netflow": {
+            "nflowAddId": "0",
+            "nflowTarget": "",
+            "nflowTimeout": "600"
+        },
+        "openFlowVersions": {
+            "ovsOf10": "1",
+            "ovsOf11": "0",
+            "ovsOf12": "0",
+            "ovsOf13": "0"
+        },
+        "passwd": "",
+        "sflow": {
+            "sflowHeader": "128",
+            "sflowPolling": "30",
+            "sflowSampling": "400",
+            "sflowTarget": ""
+        },
+        "startCLI": "0",
+        "switchType": "ovs",
+        "terminalType": "xterm"
+    },
+    "aps": [
+        {
+            "number": "1",
+            "opts": {
+                "apIP": "",
+                "apType": "default",
+                "authentication": "none",
+                "channel": "1",
+                "controllers": [],
+                "hostname": "ap1",
+                "mode": "g",
+                "netflow": "0",
+                "nodeNum": 1,
+                "passwd": "",
+                "range": "default",
+                "sflow": "0",
+                "ssid": "rede_teste",
+                "wlans": 1
+            },
+            "x": "768.0",
+            "y": "461.0"
+        }
+    ],
+    "controllers": [],
+    "hosts": [
+        {
+            "number": "1",
+            "opts": {
+                "hostname": "h1",
+                "ip": "10.0.0.3/8",
+                "nodeNum": 1,
+                "sched": "host"
+            },
+            "x": "808.0",
+            "y": "131.0"
+        }
+    ],
+    "links": [
+        {
+            "dest": "ap1",
+            "opts": {
+                "channel": "1",
+                "connection": "wifi-direct",
+                "dest": "default",
+                "mode": "g",
+                "src": "default",
+                "ssid": "new-ssid"
+            },
+            "src": "sta1"
+        },
+        {
+            "dest": "ap1",
+            "opts": {
+                "channel": "1",
+                "connection": "wifi-direct",
+                "dest": "default",
+                "mode": "g",
+                "src": "default",
+                "ssid": "new-ssid"
+            },
+            "src": "sta2"
+        },
+        {
+            "dest": "h1",
+            "opts": {},
+            "src": "ap1"
+        }
+    ],
+    "stations": [
+        {
+            "number": "1",
+            "opts": {
+                "hostname": "sta1",
+                "ip": "10.0.0.1/8",
+                "mode": "g",
+                "nodeNum": 1,
+                "range": "default",
+                "sched": "station",
+                "wlans": 1,
+                "wpans": 0
+            },
+            "x": "414.0",
+            "y": "593.0"
+        },
+        {
+            "number": "2",
+            "opts": {
+                "hostname": "sta2",
+                "ip": "10.0.0.2/8",
+                "mode": "g",
+                "nodeNum": 2,
+                "range": "default",
+                "sched": "station",
+                "wlans": 1,
+                "wpans": 0
+            },
+            "x": "1116.0",
+            "y": "635.0"
+        }
+    ],
+    "switches": [],
+    "version": "2"
+}
